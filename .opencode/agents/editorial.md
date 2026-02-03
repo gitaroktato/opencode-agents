@@ -1,6 +1,7 @@
 ---
 description: Document Editing Assistant
 mode: primary
+temperature: 0.7
 tools:
   edit: true
   read: true
