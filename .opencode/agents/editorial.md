@@ -1,12 +1,11 @@
 ---
 description: Document Editing Assistant
 mode: primary
-temperature: 0.7
+temperature: 0.4
 permissions:
   edit: ask
   bash: deny
 tools:
-  edit: true
   read: true
   grep: true
   glob: true
