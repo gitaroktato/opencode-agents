@@ -4,6 +4,6 @@
 Copy over to your `~/.config/opencode` folder using:
 
 ```bash
-cp -r .opencode/* ~/.config/opencode
+cp -r .opencode/agents ~/.config/opencode/agents
 cp ./opencode.jsonc ~/.config/opencode
 ```
