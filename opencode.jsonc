@@ -7,5 +7,32 @@
   "permission": {
     "bash": "ask",
     "external_directory": "ask"
-  }
+  },
+  "mcp": {
+    "awslabs.aws-diagram-mcp-server": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "awslabs.aws-diagram-mcp-server"
+      ],
+      "environment": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "enabled": true
+    },
+    "awslabs.aws-documentation-mcp-server": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "awslabs.aws-documentation-mcp-server@latest"
+      ],
+      "environment": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "enabled": true
+    }
+  },
+  "tools": {
+    "awslabs.*": false
+  },
 }
