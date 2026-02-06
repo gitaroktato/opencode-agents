@@ -33,6 +33,6 @@
     }
   },
   "tools": {
-    "awslabs.*": false
+    "awslabs*": false
   },
 }
