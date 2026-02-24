@@ -13,6 +13,7 @@ tools:
   grep: true
   glob: true
   awslabs*: true
+  awslabs.aws-diagram-mcp-server: false
   drawio: true
 ---
 
