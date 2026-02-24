@@ -30,9 +30,21 @@
         "FASTMCP_LOG_LEVEL": "ERROR"
       },
       "enabled": true
+    },
+    "drawio": {
+      "type": "local",
+      "command": [
+        "npx",
+        "@drawio/mcp"
+      ],
+      "environment": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "enabled": true
     }
   },
   "tools": {
-    "awslabs*": false
+    "awslabs*": false,
+    "drawio": false
   },
 }
