@@ -4,6 +4,9 @@ description: "Use this agent when you need to design, evaluate, or optimize clou
 mode: primary
 permissions:
   bash: deny
+  skill:
+    "c4-documentation": "allow"
+    "drawio": "allow"
 tools:
   write: false
   read: true
