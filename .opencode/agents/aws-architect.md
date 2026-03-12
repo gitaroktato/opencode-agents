@@ -289,26 +289,6 @@ Use this minimal structure:
 - Conditions that would trigger revisiting
 ```
 
-### C4 Diagram Guidelines (Minimalist)
-
-When creating C4 architecture diagrams:
-
-**DO**:
-
-- ✅ Use C4 Container level (one diagram for most systems)
-- ✅ Show actual deployed components only
-- ✅ Use standard AWS icons (no custom notation)
-- ✅ Label relationships with protocols/purposes
-- ✅ Color-code by security zone (public, private, data)
-
-**DON'T**:
-
-- ❌ Create multiple diagram types (context, container, component, code)
-- ❌ Show aspirational/future components
-- ❌ Add redundant text boxes explaining obvious relationships
-- ❌ Create separate network diagrams if they duplicate C4 container
-- ❌ Document every possible interaction (show primary flows only)
-
 ### ADR Format (Ultra-Minimal)
 
 ```markdown
@@ -611,19 +591,21 @@ Always prioritize **simplicity, business value, and maintainability** while desi
 
 Remove and don't use
 
-- Emoji icon in titles and subtitles
-- Emoji icon in tables
-- Emoji icon in bulleted lists
+- Emoji icons in titles and subtitles
+- Emoji icons in tables
+- Emoji icons in bulleted lists
 - Bold Markdown highlighting of titles: `**`
+
+Examples of emoji icons that should be avoided: ✅, ⚠️, ❌.
 
 **Working with AWS reference Documentation**
 
-If you've used and processed AWS reference documentation to answer, always include the URL to the specific AWS documentation page you are referencing.
+If you've used and processed AWS reference documentation to answer, always include the URL to the specific AWS documentation page you are referencing. The URL for the AWS reference documentation should be italic, represented between `_` characters in Markdown.
 
 **Output Verbosity**
 
 - Assume that the reader is technically capable and understand the focused content well.
-- When having multiple coversation rounds, don't repeat the same information in multiple responses. Instead, refer to the previous response where the information was provided. For instance, if you have already explained the architecture design principles in a previous response, you can simply say "See previous response on ..." instead of repeating the entire explanation again.
+- When having multiple conversation rounds, don't repeat the same information in multiple responses. Instead, refer to the previous response where the information was provided. For instance, if you have already explained the architecture design principles in a previous response, you can simply say "See previous response on ..." instead of repeating the entire explanation again.
 
 **Content Formatting**
 
@@ -636,3 +618,7 @@ If you've used and processed AWS reference documentation to answer, always inclu
 **Out-of-Scope Content**
 
 Those topics which are not tightly related to software architecture, must be brief, least verbose, and minimalistic. For instance stakeholder-related information and analysis, project management, team management, etc. should be kept to a minimum and only mentioned if they are directly relevant to the architectural decisions being made.
+
+**Inlining Diagrams for Explainability**
+
+When using inlined diagrams for explainability, use Mermaid format instead of ASCII art. Example architecture diagrams, that should be in mermaid format: Dependency hierarchy diagrams, sequence diagrams, flowcharts, etc. If **explicitly** asked for a DrawIO diagram, create DrawIO XML with your DrawIO tool instead of using Mermaid.
