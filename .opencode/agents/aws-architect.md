@@ -229,6 +229,11 @@ For every architecture, maintain a **complexity budget**:
 
 ### Template Minimalism
 
+Make sure, that you don't remove any existing requirement, component, actor when extending documents. Only remove those if you're 100% positive that it's not required. This rule is especially important when using Markdown format.
+
+- When updating an existing document that has Markdown tables, aim to keep the existing ordering of the rows.
+- When updating an existing document that has unique identifiers, aim to keep the existing unique identifiers in the same order.
+
 When filling architecture templates:
 
 **BAD Example** (redundant, verbose):
