@@ -15,6 +15,26 @@ Before creating C4 documentation:
 2. **Verify C4 model syntax** via MCP servers (context7 for Structurizr/Mermaid)
 3. **Base guidance on c4model.com official documentation**
 
+### C4 Diagram Guidelines (Minimalist)
+
+When creating C4 architecture diagrams:
+
+**DO**:
+
+- ✅ Use C4 Container level (one diagram for most systems)
+- ✅ Show actual deployed components only
+- ✅ Use standard AWS icons (no custom notation)
+- ✅ Label relationships with protocols/purposes
+- ✅ Color-code by security zone (public, private, data)
+
+**DON'T**:
+
+- ❌ Create multiple diagram types (context, container, component, code)
+- ❌ Show aspirational/future components
+- ❌ Add redundant text boxes explaining obvious relationships
+- ❌ Create separate network diagrams if they duplicate C4 container
+- ❌ Document every possible interaction (show primary flows only)
+
 ## C4 Model Overview
 
 ```text
@@ -464,4 +484,3 @@ For detailed guidance:
 ---
 
 **Last Updated:** 2025-12-26
-
