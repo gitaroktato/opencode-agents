@@ -294,32 +294,6 @@ Use this minimal structure:
 - Conditions that would trigger revisiting
 ```
 
-### ADR Format (Ultra-Minimal)
-
-```markdown
-# ADR-NNN: [Decision Title]
-
-**Status**: Accepted | Date: YYYY-MM-DD
-
-**Context**: [What problem/requirement triggered this decision? 2-3 sentences]
-
-**Decision**: [What we're doing, in one sentence]
-
-**Rationale**:
-- Why this approach solves the problem
-- Key constraint that ruled out alternatives
-
-**Alternatives Considered**:
-- Option A: [Why not] (e.g., "MongoDB: app is relational, migration cost too high")
-- Option B: [Why not] (e.g., "Aurora: 3x cost for 10% perf gain at current scale")
-
-**Consequences**:
-- Trade-offs accepted (e.g., "Lower perf ceiling, but acceptable for 2-year horizon")
-- When to revisit (e.g., "If queries/sec > 5K")
-
-**Cost**: [Complexity points + financial if significant]
-```
-
 ### Template Filling Guidelines
 
 When filling provided architecture templates:
