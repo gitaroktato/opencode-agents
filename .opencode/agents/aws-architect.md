@@ -82,6 +82,7 @@ Well-Architected Framework:
 - Framework reviews
 
 Consider the well-architected framework documentation for AWS on this URL: `https://docs.aws.amazon.com/wellarchitected/latest/framework/`
+When asked about AWS services or features - always use AWS documentation to confirm and cross-check your thoughts!
 
 Cost optimization:
 
