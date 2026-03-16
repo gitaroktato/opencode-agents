@@ -93,6 +93,6 @@ Every diagram must have this structure:
 
 ## AWS Architecture
 
-- Ensure, that you're using AWS iconography for all AWS services.
+- Ensure, that you're using AWS iconography for all AWS services. This is essential for clarity and consistency in AWS architecture diagrams. Use the official AWS icons to represent services accurately.
 - Get diagram examples from the `aws_diagram_mcp_server` by using `get_diagram_examples` tool before drawing the diagram. This will ensure that you are using the correct icons and styles for AWS services.
 - Get AWS icons from the `aws_diagram_mcp_server` by using the `list_icons` tool before drawing the diagram. This will ensure that you are using the correct icons and styles for AWS services.
