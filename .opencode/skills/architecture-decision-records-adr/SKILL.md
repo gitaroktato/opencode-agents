@@ -7,6 +7,15 @@ description: Architecture Decision Records (ADRs) for documenting technical deci
 
 ADRs document significant technical decisions with their context and consequences.
 
+## Thinking and Reasoning
+
+When preparing the ADR make sure you revisit the following sources of information first:
+
+- Component decomposition from the existing architecture documentation
+- Architecture constraints and assumptions from the existing architecture documentation
+- Non-functional requirements and quality attributes from the existing architecture documentation
+- AWS best practices, whitepapers, and prescriptive guidance on AWS documentation
+
 ## When to Create an ADR
 
 Create an ADR when:
