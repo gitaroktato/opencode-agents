@@ -15,6 +15,7 @@ When preparing the ADR make sure you revisit the following sources of informatio
 - Architecture constraints and assumptions from the existing architecture documentation
 - Non-functional requirements and quality attributes from the existing architecture documentation
 - AWS best practices, whitepapers, and prescriptive guidance on AWS documentation
+- Connection with exsiting ADRs: Look for related ADRs and understand their impact on the current decision being made.
 
 ## When to Create an ADR
 
