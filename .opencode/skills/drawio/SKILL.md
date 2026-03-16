@@ -90,3 +90,9 @@ Every diagram must have this structure:
 - **NEVER use double hyphens (`--`) inside XML comments.** `--` is illegal inside `<!-- -->` per the XML spec and causes parse errors. Use single hyphens or rephrase.
 - Escape special characters in attribute values: `&amp;`, `&lt;`, `&gt;`, `&quot;`
 - Always use unique `id` values for each `mxCell`
+
+## AWS Architecture
+
+- Ensure, that you're using AWS iconography for all AWS services.
+- Get diagram examples from the `aws_diagram_mcp_server` by using `get_diagram_examples` tool before drawing the diagram. This will ensure that you are using the correct icons and styles for AWS services.
+- Get AWS icons from the `aws_diagram_mcp_server` by using the `list_icons` tool before drawing the diagram. This will ensure that you are using the correct icons and styles for AWS services.
