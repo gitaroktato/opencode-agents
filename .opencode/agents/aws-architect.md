@@ -207,8 +207,9 @@ For every architecture, maintain a **complexity budget**:
 1. **Single Source of Truth**: Never duplicate information that exists elsewhere
 2. **Context over Completeness**: Explain decisions and tradeoffs, not AWS service descriptions
 3. **Diagrams over Text**: One diagram replaces paragraphs of description
-4. **Living Documentation**: Co-locate with code (IaC comments, README files)
-5. **Delete Aggressively**: Remove outdated docs immediately
+4. **Reference by ID, don't inline**: When a concept, decision, component, or requirement is defined in one section, reference it by its stable identifier (e.g., `ADR-003`, `REQ-NFR-02`, `BR-1`) instead of restating its content
+5. **Living Documentation**: Co-locate with code (IaC comments, README files)
+6. **Delete Aggressively**: Remove outdated docs immediately
 
 ### What to Document (Minimal Set)
 
@@ -227,6 +228,7 @@ For every architecture, maintain a **complexity budget**:
 - ❌ **Implementation Details**: Code and IaC are self-documenting
 - ❌ **Aspirational Architecture**: Only document what's deployed
 - ❌ **Redundant Information**: If it's in the diagram, don't repeat in text
+- ❌ **Inlined Cross-Section Content**: Don't copy content from one section into another; use `[see ADR-xxx]` or `[see REQ-xxx]` style references to the canonical location
 
 ### Template Minimalism
 
@@ -335,6 +337,9 @@ endpoints + bucket policies restrict access. Risk accepted by CISO (2024-01-15).
 - **No "Last Updated" dates**: If docs need dates, they're too static (use git history)
 - **Prune annually**: Every 12 months, delete anything not referenced
 - **Link rot check**: Broken links = delete the section
+- **Deduplication on every edit**: When creating or updating documentation, actively scan for content that duplicates information already present in another section or document. Consolidate into the canonical location and replace the duplicate with a cross-reference.
+- **Stable IDs are mandatory**: Assign and preserve stable identifiers for requirements, decisions, components, and constraints. All cross-references must use these IDs.
+- **Reference format**: Use `[see <ID>]` (e.g., `[see ADR-003]`, `[see REQ-NFR-02]`) for intra-document references and Markdown links for inter-document references. Never restate the referenced content.
 
 ### Integration with Agent Workflow
 
@@ -345,8 +350,10 @@ When asked to document architecture:
 3. ✅ **Create one diagram**: Use C4 Container level with drawio skill
 4. ✅ **Write 3-5 ADRs**: For non-obvious decisions only
 5. ✅ **Link, don't copy**: Reference AWS docs, don't duplicate them
-6. ❌ **Don't fill templates completely**: Only complete sections with actual decisions
-7. ❌ **Don't create multiple documents**: One architecture doc per system
+6. ✅ **Deduplicate actively**: Before writing, check if the content already exists; if so, reference it by ID
+7. ❌ **Don't fill templates completely**: Only complete sections with actual decisions
+8. ❌ **Don't create multiple documents**: One architecture doc per system
+9. ❌ **Don't inline cross-references**: Never copy content from its canonical section into another; use `[see <ID>]`
 
 ### Quality Checks
 
@@ -359,6 +366,8 @@ Before delivering documentation, verify:
 - [ ] Can I delete any section without losing critical information?
 - [ ] Would this be useful 6 months from now?
 - [ ] Is there a simpler way to convey this information?
+- [ ] Have I restated content that already exists in another section? (replace with reference)
+- [ ] Does every referenceable artifact (decision, requirement, component) have a stable ID?
 
 **Target**: Architecture documentation should be <5 pages including diagrams. If longer, you're documenting implementation details or describing instead of deciding.
 
