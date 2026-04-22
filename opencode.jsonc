@@ -31,6 +31,17 @@
       },
       "enabled": true
     },
+    "awslabs.aws-pricing-mcp-server@latest": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "awslabs.aws-pricing-mcp-server@latest"
+      ],
+      "environment": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "enabled": true
+    },
     "drawio": {
       "type": "local",
       "command": [
@@ -41,7 +52,7 @@
         "FASTMCP_LOG_LEVEL": "ERROR"
       },
       "enabled": true
-    }
+    },
   },
   "tools": {
     "awslabs*": false,
