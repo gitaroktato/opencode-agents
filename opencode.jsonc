@@ -41,10 +41,16 @@
         "FASTMCP_LOG_LEVEL": "ERROR"
       },
       "enabled": true
-    }
+    },
+    "tessera": {
+      "type": "remote",
+      "url": "http://localhost:8000/mcp",
+      "enabled": true,
+    },
   },
   "tools": {
     "awslabs*": false,
-    "drawio": false
+    "drawio": false,
+    "tessera": false
   },
 }
