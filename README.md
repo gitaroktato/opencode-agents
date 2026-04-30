@@ -13,3 +13,6 @@ cp ./opencode.jsonc ~/.config/opencode
 ## References
 
 - [Arc42 Skill](https://github.com/melodic-software/claude-code-plugins/tree/main/plugins/documentation-standards/skillshttps://github.com/melodic-software/claude-code-plugins/tree/main/plugins/documentation-standards/skills)
+- [AWS MCP Servers](https://awslabs.github.io/mcp/)
+- [Awesome Claude Code Subagents](https://github.com/VoltAgent/awesome-claude-code-subagents/)
+- [Anthropic official skills](https://github.com/anthropics/skills)
