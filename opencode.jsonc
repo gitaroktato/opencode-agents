@@ -3,7 +3,15 @@
   "model": "anthropic/claude-sonnet-4-6",
   "autoupdate": "notify",
   "permission": {
-    "bash": "ask",
+    "bash": {
+      "*": "ask",
+      "git *": "allow",
+      "mkdir *": "allow",
+      "npm *": "allow",
+      "rm *": "ask",
+      "grep *": "allow",
+      "head *": "allow"
+    },
     "external_directory": "ask"
   },
   "mcp": {
