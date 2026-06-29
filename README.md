@@ -5,9 +5,9 @@
 Copy over to your `~/.config/opencode` folder using:
 
 ```bash
-cp -TRf .opencode/agents ~/.config/opencode/agents
-cp -TRf .opencode/skills ~/.config/opencode/skills
-cp ./opencode.jsonc ~/.config/opencode
+yes | cp -TRf .opencode/agents ~/.config/opencode/agents
+yes | cp -TRf .opencode/skills ~/.config/opencode/skills
+yes | cp ./opencode.jsonc ~/.config/opencode
 ```
 
 ## References
