@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "anthropic/claude-sonnet-4-6",
+  "model": "unsloth/Qwen3.6-27B-GGUF",
   "autoupdate": "notify",
   "permission": {
     "bash": {
@@ -12,7 +12,33 @@
       "grep *": "allow",
       "head *": "allow"
     },
-    "external_directory": "ask"
+    "external_directory": "ask",
+  },
+  "provider": {
+    "unsloth-studio": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "unsloth-studio",
+      "options": {
+        "baseURL": "http://127.0.0.1:8888/v1",
+        "apiKey": ""
+      },
+      "models": {
+        "qwen3.6-27b": {
+          "name": "unsloth/Qwen3.6-27B-GGUF",
+          "limit": {
+            "context": 128000,
+            "output": 65536
+          }
+        },
+        "qwen3.6-32b-a3b": {
+          "name": "unsloth/Qwen3.6-35B-A3B-GGUF",
+          "limit": {
+            "context": 128000,
+            "output": 65536
+          }
+        }
+      }
+    }
   },
   "mcp": {
     "awslabs.aws-diagram-mcp-server": {
