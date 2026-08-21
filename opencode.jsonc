@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "anthropic/claude-sonnet-4-6",
+  "model": "unsloth/Qwen3.6-27B-GGUF",
   "autoupdate": "notify",
   "permission": {
     "bash": {
@@ -12,7 +12,86 @@
       "grep *": "allow",
       "head *": "allow"
     },
-    "external_directory": "ask"
+    "external_directory": "ask",
+  },
+  "provider": {
+    "unsloth-studio": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Unsloth Studio",
+      "options": {
+        "baseURL": "http://127.0.0.1:8888/v1",
+        "apiKey": "{env:UNSLOTH_API_KEY}"
+      },
+      "models": {
+        "unsloth/Qwen3.8-27B-GGUF": {
+          "name": "unsloth/Qwen3.8-27B-GGUF",
+          "limit": {
+            "context": 82176,
+            "output": 65536
+          },
+          "variants": {
+            "none": {
+              "reasoningEffort": "none"
+            },
+            "low": {
+              "reasoningEffort": "low",
+              "reasoning_budget_tokens": 512
+            },
+            "medium": {
+              "reasoningEffort": "medium",
+              "reasoning_budget_tokens": 2048
+            },
+            "xhigh": {
+              "reasoningEffort": "xhigh",
+              "reasoning_budget_tokens": 8192
+            },
+            "xhigh-no-preserve": {
+              "reasoningEffort": "xhigh",
+              "reasoning_budget_tokens": 8192,
+              "chat_template_kwargs": {
+                "preserve_thinking": false
+              }
+            }
+          }
+        },
+        "unsloth/Qwen3.6-27B-GGUF": {
+          "name": "unsloth/Qwen3.6-27B-GGUF",
+          "limit": {
+            "context": 128000,
+            "output": 65536
+          },
+          "variants": {
+            "none": {
+              "chat_template_kwargs": {
+                "enable_thinking": false
+              }
+            },
+            "low": {
+              "reasoning_budget_tokens": 512
+            },
+            "medium": {
+              "reasoning_budget_tokens": 2048
+            },
+            "xhigh": {
+              "reasoning_budget_tokens": 8192
+            },
+            "xhigh-no-preserve": {
+              "reasoning_budget_tokens": 8192,
+              "chat_template_kwargs": {
+                "preserve_thinking": false
+              }
+            }
+          }
+        },
+        "qwen3.6-32b-a3b": {
+          "name": "unsloth/Qwen3.6-35B-A3B-GGUF",
+          "limit": {
+            "context": 128000,
+            "output": 65536
+          }
+        }
+      }
+    }
   },
   "mcp": {
     "awslabs.aws-diagram-mcp-server": {
