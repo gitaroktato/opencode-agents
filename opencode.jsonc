@@ -8,11 +8,26 @@
       "git *": "allow",
       "mkdir *": "allow",
       "npm *": "allow",
+      "npx *": "allow",
       "rm *": "ask",
+      "rg *": "allow",
+      "sed *": "allow",
       "grep *": "allow",
-      "head *": "allow"
+      "find *": "allow",
+      "sort *": "allow",
+      "head *": "allow",
+      "unzip *": "allow",
+      "which *": "allow",
+      "cat *": "allow",
+      "echo *": "allow",
+      "pandoc *": "allow",
+      "wc *": "allow",
+      "ls *": "allow"
     },
-    "external_directory": "ask",
+    "external_directory": {
+      "*": "ask",
+      "/tmp/opencode/**": "allow"
+    },
   },
   "provider": {
     "unsloth-studio": {
